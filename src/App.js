@@ -3,6 +3,7 @@ import LandingPage from './lib/LandingPage';
 import TestPage from './lib/TestPage';
 import { Switch, Route } from 'react-router-dom';
 import Header from './lib/Header';
+import SignInBox from './lib/SignInBox';
 
 import './App.css';
 
