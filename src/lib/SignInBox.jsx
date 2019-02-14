@@ -31,6 +31,16 @@ const fbButton = {
   class: "fb-login-button",
 }
 
+const signUp = {
+  marginTop: '10px',
+  backgroundColor: '#4c69ba',
+  border: '1px solid #4c69ba',
+  color: 'white',
+  fontSize: '14px',
+  fontWeight: 'bold',
+  width: '258px',
+  height: '36px',
+}
 
 class SignInBox extends React.Component {
   state = {
@@ -50,36 +60,40 @@ handleChange = name => event => {
     const { classes } = this.props;
 
     return (
+  <div>
+    <div style={{
+      backgroundColor: 'white',
+      borderRadius: '3px',
+      border: '1px solid #e6e6e6',
+      width: '350px',
+      marginBottom: '10px',
+      paddingTop: '30px'
+    }}>
       <div>
         <img src='%PUBLIC_URL%/../ig_logo.png'></img>
           <h4 style={{color: '#999', textAlign: 'center', lineHeight: '30px', margin: '20px'}}>Sign up to see photos and videos from your friends.</h4>
             <div style={{
               padding: '10px',
-
             }}>
               <FBLogin />
             </div>
-
             <div style={{
               display: 'flex',
               flexDirection: 'row',
               justifyContent: 'space-between',
               margin: '10px'
-
             }}>
               <div style={{
                 width: '40%',
               }}>
-                <hr />
+                <hr style={{borderColor: '#F5F5F5'}}/>
               </div>
               <div>
                 <span> OR </span>
               </div>
               <div style={{width: '40%'}}>
-                <hr / >
+                <hr />
               </div>
-
-
             </div>
 
             <div
@@ -87,7 +101,8 @@ handleChange = name => event => {
               data-size="large"
               data-button-type="login_with"
               data-auto-logout-link="false"
-              data-use-continue-as="false"></div>
+              data-use-continue-as="false">
+            </div>
 
         <form className={classes.container} noValidate autoComplete="off">
           <TextField
@@ -128,8 +143,26 @@ handleChange = name => event => {
           />
         </form>
 
+        <button style={signUp}>Sign up
+        </button>
         <p style={{color: '#999', textAlign: 'center', lineHeight: '30px', margin: '20px'}}>By signing up, you agree to our <strong>Terms</strong> , <strong>Data Policy</strong> and <strong>Cookies Policy</strong> .</p>
       </div>
+
+
+    </div>
+
+    <div style={{
+      backgroundColor: 'white',
+      borderRadius: '3px',
+      border: '1px solid #e6e6e6',
+      width: '350px',
+      paddingTop: '10px',
+      paddingBottom: '10px'
+    }}
+      >
+      <p>Have an account? <a href=''>Log in</a></p>
+    </div>
+  </div>
     );
   }
 }

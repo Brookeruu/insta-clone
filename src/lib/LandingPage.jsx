@@ -10,7 +10,7 @@ import SignInBox from './SignInBox';
 const landingStyle  = {
   display: 'grid',
   gridGap: '1em',
-  padding: '20px',
+  
   gridTemplateColumns: 'repeat(auto-fit, 400px)',
   gridTemplateRows: 'repeat(auto-fit, 800px)',
   justifyContent: 'center'
@@ -23,9 +23,6 @@ const phoneColumn = {
 }
 
 const column2 = {
-  backgroundColor: 'white',
-  borderRadius: '3px',
-  border: '1px solid #e6e6e6',
   padding: '25px',
   margin: '25px'
 }
@@ -40,12 +37,18 @@ class LandingPage extends Component {
         <div style={landingStyle}>
           <div style={phoneColumn}>
             <img src="%PUBLIC_URL%/../ig_phones.png" alt="phone images from IG"></img>
-            </div>
-            <div style={column2}>
-              <SignInBox/>
-            </div >
-            </div>
           </div>
+
+            <div style={column2}>
+
+              <div>
+                <SignInBox/>
+              </div>
+
+            </div>
+
+          </div>
+        </div>
         );
       }
     }

@@ -8,28 +8,28 @@ import SignInBox from './lib/SignInBox';
 import './App.css';
 
 
-  
+
   const App = () => {
-  
+
     return (
-    
+
     <div className="App">
     <Header />
     <Switch>
       <Route exact path='/' component={LandingPage} />
-      <Route path='/Year' component={TestPage} />
+      <Route path='/TestPage' component={TestPage} />
     </Switch>
     <hr />
 
     </div>
-    
-  
-  
+
+
+
   );
-  
-  
+
+
   };
-  
+
 
 
 
